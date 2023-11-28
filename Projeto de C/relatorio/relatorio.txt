@@ -1,0 +1,71 @@
+Objetivo:
+- O sistema de gerenciamento de tarefas (ou Gerenciador de Tarefas) permite ao usuário adicionar tarefas,
+  editar, marcar como concluída, ver todas as tarefas adicionadas, pendentes e concluídas. 
+- Ele é construído em linguagem C e utiliza um conjunto de estruturas e funções para realizar essas operações.
+
+Estrutura:
+
+Task:
+- Armazena informações de cada tarefa, incluindo título, descrição, data de criação, prazo de conclusão e status.
+- Utiliza um vetor chamado "tasks" para armazenar múltiplas instâncias da estrutura "Task".
+- O vetor "tasks" possui um limite máximo definido pela constante "Max_Tasks".
+- Usa-se um contador "numTasks" para rastrear o número atual de tarefas armazenadas.
+
+TaskStatus:
+- Define os estados da tarefa: PENDENTE ou CONCLUIDA.
+
+Funcionalidades do Sistema:
+
+Adicionar Tarefa (addTask):
+- Solicita ao usuário informações sobre a nova tarefa (título, descrição, data de criação e prazo de conclusão).
+- Verifica se há espaço disponível no vetor de tarefas.
+- Adiciona a nova tarefa ao vetor tarefas.
+
+Editar Tarefa (editTask):
+- Permite ao usuário editar uma tarefa existente.
+- Solicita o número da tarefa a ser editada.
+- Permite a edição do título, descrição e prazo de conclusão dessa tarefa.
+
+Concluir Tarefa (markCompleted):
+
+- Permite ao usuário marcar uma tarefa específica como concluída.
+- Solicita o número da tarefa a ser marcada como concluída.
+- Atualiza o status da tarefa para CONCLUIDA.
+
+Todas as Tarefas (allTasks):
+
+- Mostra todas as tarefas cadastradas no sistema.
+- Apresenta informações detalhadas sobre cada tarefa, incluindo título, descrição, data de criação, 
+  prazo de conclusão e status.
+
+Tarefas Pendentes (pendingTasks):
+
+- Exibe as tarefas pendentes com status "PENDENTE".
+- Mostra as informações básicas das tarefas pendentes, como título, descrição, data de criação e prazo de conclusão.
+
+Tarefas Concluídas (completedTasks):
+
+- Mostra as tarefas que foram concluídas com status "CONCLUIDA".
+- Exibe informações básicas das tarefas concluídas, como título, descrição, data de criação e prazo de conclusão.
+
+Funcionamento do Programa:
+
+Menu Interativo (main):
+
+- O menu exibe as opções para adicionar, editar, marcar como concluída e listar tarefas, além da opção de sair.
+- Utiliza um loop do-while para manter o programa em execução até que o usuário escolha sair (0).
+
+Tratamento de Opções (switch-case):
+
+- De acordo com a escolha do usuário no menu, a função correspondente é chamada para realizar a operação desejada.
+- Caso o usuário insira uma opção inválida, exibe uma mensagem de erro e solicita outra opção válida.
+
+Interação com o Usuário:
+
+- Para cada operação, o programa interage com o usuário através do terminal.
+- Solicita informações necessárias para adicionar/editar tarefas e pede números de tarefas para realizar operações específicas.
+
+Armazenamento e Manipulação de Dados:
+
+- Utiliza estruturas de dados (vetores, estruturas) para armazenar informações das tarefas.
+- As funções realizam operações de adição, edição, marcação de conclusão e listagem das tarefas com base nos dados armazenados.
